@@ -25,13 +25,13 @@ It helps maintainers reduce:
 
 ```bash
 # Global (recommended for daily use)
-npm install -g agent-context-lint
+npm install -g @pqqqqqdev/agent-context-lint
 
 # Or use npx (no install)
-npx agent-context-lint .
+npx @pqqqqqdev/agent-context-lint .
 
 # Local dev install
-npm install --save-dev agent-context-lint
+npm install --save-dev @pqqqqqdev/agent-context-lint
 ```
 
 ## Usage
@@ -171,3 +171,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## License
 
 MIT
+

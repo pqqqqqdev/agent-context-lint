@@ -9,7 +9,7 @@
     "url": "git+https://github.com/pqqqqqdev/agent-context-lint.git"
   },
   "bin": {
-    "agent-context-lint": "./dist/cli.js"
+    "agent-context-lint": "dist/cli.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
