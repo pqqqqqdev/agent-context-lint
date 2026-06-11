@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "A command-line linter that audits AI coding-agent context/instruction files for repositories. Helps reduce token bloat, duplicated instructions, vague agent instructions, missing project commands, and dangerous shell commands.",
   "license": "MIT",
-  "author": "",
+  "author": "pqqqqqdev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/agent-context-lint.git"
+    "url": "git+https://github.com/pqqqqqdev/agent-context-lint.git"
   },
   "bin": {
     "agent-context-lint": "./dist/cli.js"
@@ -47,5 +47,9 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "type": "commonjs"
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pqqqqqdev/agent-context-lint/issues"
+  },
+  "homepage": "https://github.com/pqqqqqdev/agent-context-lint#readme"
 }
