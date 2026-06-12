@@ -29,6 +29,8 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Self-lint repository
+        run: node dist/cli.js .
       - name: Run tests
         run: npm test
 
@@ -42,4 +44,5 @@ jobs:
           echo -e "# README\n\nInstall: npm install\nTest: npm test\nLint: npm run lint" > /tmp/acl-smoke/README.md
           node dist/cli.js /tmp/acl-smoke
           rm -rf /tmp/acl-smoke
+
 
