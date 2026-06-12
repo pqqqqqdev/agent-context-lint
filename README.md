@@ -3,6 +3,7 @@
 [![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A command-line linter that audits AI coding-agent context and instruction files for repositories.
 
 It helps maintainers reduce:
@@ -68,8 +69,8 @@ agent-context-lint --help
 
 ## Exit Codes
 
-- `0` â€” Success (no errors). Warnings are acceptable.
-- `1` â€” One or more **errors** were found.
+- `0` -- Success (no errors). Warnings are acceptable.
+- `1` -- One or more **errors** were found.
 
 ## Example Output (Human Readable)
 
@@ -78,18 +79,18 @@ agent-context-lint: scanned 2 file(s) in /Users/dev/my-repo
 Total estimated tokens: 8724
 Errors: 2  Warnings: 5
 
-ðŸ“„ AGENTS.md (6840 tokens)
-  âŒ [token-budget] File exceeds maximum token budget: 6840 tokens (limit: 3000)
-  âŒ [dangerous-commands] Dangerous shell command detected: [forceful recursive removal] (line 12)
+AGENTS.md (6840 tokens)
+  [error] [token-budget] File exceeds maximum token budget: 6840 tokens (limit: 3000)
+  [error] [dangerous-commands] Dangerous shell command detected: [forceful recursive removal] (line 12)
     > [example: destructive removal command]
-  âš ï¸ [vague-instructions] Vague instruction detected: "make it better" (line 4)
+  [warning] [vague-instructions] Vague instruction detected: "make it better" (line 4)
     > Always make it better when you touch code.
-  âš ï¸ [duplicate-lines] Duplicated line appears 3 times (lines 19, 27, 41)
+  [warning] [duplicate-lines] Duplicated line appears 3 times (lines 19, 27, 41)
     > Always run the tests.
 
-ðŸ“„ README.md (1884 tokens)
-  âš ï¸ [token-budget] File is large: 1884 tokens (warning threshold: 1500)
-  âš ï¸ [missing-commands] No lint command or linting instructions detected
+README.md (1884 tokens)
+  [warning] [token-budget] File is large: 1884 tokens (warning threshold: 1500)
+  [warning] [missing-commands] No lint command or linting instructions detected
 
 Scan failed with errors. Fix the issues above.
 ```
@@ -132,8 +133,8 @@ Scan failed with errors. Fix the issues above.
 
 See the `examples/` directory:
 
-- `examples/bloated-AGENTS.md` â€” triggers many rules
-- `examples/clean-AGENTS.md` â€” minimal good example
+- `examples/bloated-AGENTS.md` -- triggers many rules
+- `examples/clean-AGENTS.md` -- minimal good example
 
 Run against the examples (the files use demo names, so copy/rename first or run from a temp dir):
 
@@ -174,5 +175,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## License
 
 MIT
-
-
