@@ -1,6 +1,6 @@
 {
   "name": "@pqqqqqdev/agent-context-lint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A command-line linter that audits AI coding-agent context/instruction files for repositories. Helps reduce token bloat, duplicated instructions, vague agent instructions, missing project commands, and dangerous shell commands.",
   "license": "MIT",
   "author": "pqqqqqdev",
