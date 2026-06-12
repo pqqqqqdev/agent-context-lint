@@ -1,5 +1,4 @@
-﻿# agent-context-lint
-
+# agent-context-lint
 
 [![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
