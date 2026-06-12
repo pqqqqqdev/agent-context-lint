@@ -1,9 +1,9 @@
-# agent-context-lint
+﻿# agent-context-lint
+
 
 [![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
 A command-line linter that audits AI coding-agent context and instruction files for repositories.
 
 It helps maintainers reduce:
@@ -29,24 +29,12 @@ It helps maintainers reduce:
 
 ```bash
 # Global (recommended for daily use)
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 npm install -g @pqqqqqdev/agent-context-lint
 
 # Or use npx (no install)
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 npx @pqqqqqdev/agent-context-lint .
 
 # Local dev install
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 npm install --save-dev @pqqqqqdev/agent-context-lint
 ```
 
@@ -54,38 +42,18 @@ npm install --save-dev @pqqqqqdev/agent-context-lint
 
 ```bash
 # Lint current directory
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 agent-context-lint .
 
 # Lint a specific repo
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 agent-context-lint /path/to/repo
 
 # JSON output (for CI, scripts, or piping)
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 agent-context-lint . --json
 
 # Custom token budget (error threshold)
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 agent-context-lint . --max-tokens 2000
 
 # Help
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 agent-context-lint --help
 ```
 
@@ -101,8 +69,8 @@ agent-context-lint --help
 
 ## Exit Codes
 
-- `0` — Success (no errors). Warnings are acceptable.
-- `1` — One or more **errors** were found.
+- `0` â€” Success (no errors). Warnings are acceptable.
+- `1` â€” One or more **errors** were found.
 
 ## Example Output (Human Readable)
 
@@ -111,18 +79,18 @@ agent-context-lint: scanned 2 file(s) in /Users/dev/my-repo
 Total estimated tokens: 8724
 Errors: 2  Warnings: 5
 
-📄 AGENTS.md (6840 tokens)
-  ❌ [token-budget] File exceeds maximum token budget: 6840 tokens (limit: 3000)
-  ❌ [dangerous-commands] Dangerous shell command detected: [forceful recursive removal] (line 12)
+ðŸ“„ AGENTS.md (6840 tokens)
+  âŒ [token-budget] File exceeds maximum token budget: 6840 tokens (limit: 3000)
+  âŒ [dangerous-commands] Dangerous shell command detected: [forceful recursive removal] (line 12)
     > [example: destructive removal command]
-  ⚠️ [vague-instructions] Vague instruction detected: "make it better" (line 4)
+  âš ï¸ [vague-instructions] Vague instruction detected: "make it better" (line 4)
     > Always make it better when you touch code.
-  ⚠️ [duplicate-lines] Duplicated line appears 3 times (lines 19, 27, 41)
+  âš ï¸ [duplicate-lines] Duplicated line appears 3 times (lines 19, 27, 41)
     > Always run the tests.
 
-📄 README.md (1884 tokens)
-  ⚠️ [token-budget] File is large: 1884 tokens (warning threshold: 1500)
-  ⚠️ [missing-commands] No lint command or linting instructions detected
+ðŸ“„ README.md (1884 tokens)
+  âš ï¸ [token-budget] File is large: 1884 tokens (warning threshold: 1500)
+  âš ï¸ [missing-commands] No lint command or linting instructions detected
 
 Scan failed with errors. Fix the issues above.
 ```
@@ -165,24 +133,16 @@ Scan failed with errors. Fix the issues above.
 
 See the `examples/` directory:
 
-- `examples/bloated-AGENTS.md` — triggers many rules
-- `examples/clean-AGENTS.md` — minimal good example
+- `examples/bloated-AGENTS.md` â€” triggers many rules
+- `examples/clean-AGENTS.md` â€” minimal good example
 
 Run against the examples (the files use demo names, so copy/rename first or run from a temp dir):
 
 ```bash
 # Example of testing the bloated case
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 mkdir -p /tmp/bloated-demo && cp examples/bloated-AGENTS.md /tmp/bloated-demo/AGENTS.md
 agent-context-lint /tmp/bloated-demo
 # (manually remove /tmp/bloated-demo afterward)
-
-[![CI](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml/badge.svg)](https://github.com/pqqqqqdev/agent-context-lint/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@pqqqqqdev/agent-context-lint.svg)](https://www.npmjs.com/package/@pqqqqqdev/agent-context-lint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ```
 
 ## Why This Exists
@@ -194,7 +154,7 @@ AI coding agents (Cursor, Claude, Copilot, Windsurf, etc.) are powerful, but the
 ## Development
 
 ```bash
-git clone https://github.com/yourusername/agent-context-lint.git
+git clone https://github.com/pqqqqqdev/agent-context-lint.git
 cd agent-context-lint
 npm install
 npm run build
